@@ -1,5 +1,4 @@
 import React from 'react'
-import Request from '../../helpers/request.js';
 import CakeList from '../../components/cakes/CakeList.js'
 
 class CakeContainer extends React.Component {

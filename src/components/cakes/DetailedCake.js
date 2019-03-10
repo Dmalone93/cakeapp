@@ -1,12 +1,11 @@
 import React from 'react';
-import Cake from './Cake.js';
 
 const DetailedCake = (props) => {
   if (!props.cake){
     return null
   }
 
-  const handleDelete = () => {
+  const deleteFunction = () => {
     props.onDelete(props.cake.id);
   }
 
@@ -21,7 +20,7 @@ const DetailedCake = (props) => {
     <img src={props.cake.imageUrl} alt="cake-img" />
     <p>{props.cake.yumFactor}</p>
     <p>{props.cake.comment}</p>
-    <button onClick={handleDelete}>Delete</button>
+    <button onClick={deleteFunction}>Delete</button>
     <button onClick={handleEdit}>Edit</button>
     </div>
     </React.Fragment>

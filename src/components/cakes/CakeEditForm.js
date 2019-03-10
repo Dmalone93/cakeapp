@@ -11,7 +11,7 @@ const CakeEditForm = (props) => {
     "name": event.target.name.value,
     "comment": event.target.comment.value,
     "yumFactor": event.target.yumFactor.value,
-    "image": event.target.image.value,
+    "imageUrl": event.target.image.value,
       }
       props.handleCakeUpdate(cake);
     }

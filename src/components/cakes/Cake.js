@@ -1,6 +1,5 @@
 import React from 'react'
-import { Button } from 'react'
-import CakeList from './CakeList.js'
+
 import '../../css/Cake.css'
 
 const Cake = (props) => {
