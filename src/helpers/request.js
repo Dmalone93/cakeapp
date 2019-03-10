@@ -8,6 +8,7 @@ class Request {
   delete(url) {
     return fetch(url, {
       method: "DELETE",
+      url: 'http://localhost:3000/cakes/',
       headers: {'Content-Type': "application/json"}
     })
   }
@@ -20,9 +21,9 @@ class Request {
     })
   }
 
-  update(url, payload){
+  put(url, payload){
     return fetch(url, {
-      method: "PUT",
+      method: "PATCH",
       headers: {'Content-Type': "application/json"},
       body: JSON.stringify(payload)
     })

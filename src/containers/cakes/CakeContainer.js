@@ -1,22 +1,18 @@
 import React from 'react'
 import Request from '../../helpers/request.js';
+import CakeList from '../../components/cakes/CakeList.js'
 
 class CakeContainer extends React.Component {
   constructor(props){
     super(props);
-    this.state = {cakes: []}
   }
 
-  componentDidMount(){
-    let request = new Request()
-    request.get('/api/cakes').then((data) => {
-      this.setState({cakes: data.cakes})
-    })
-  }
 
   render(){
-    return ()
-    <CakeList cakes = {this.state.cakes} />
+    return (
+      <CakeList cakes = {this.props.cakes} />
+    )
+
   }
 }
 

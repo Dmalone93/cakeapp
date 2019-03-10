@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './css/NavBar.css'
 
 const NavBar = (props) => {
 
@@ -8,16 +9,10 @@ const NavBar = (props) => {
 
       <ul>
         <li className="navLink">
-          <Link to="/pirates">Pirates</Link>
+          <Link to="/cakes">Cakes</Link>
         </li>
         <li className="navLink">
-        <Link to="pirates/new">Add Pirate</Link>
-        </li>
-        <li className="navLink">
-          <Link to="/ships">Ships</Link>
-        </li>
-        <li className="navLink">
-          <Link to="/raids" >Raids</Link>
+        <Link to="/cakes/new">Add a Cake</Link>
         </li>
 
       </ul>
@@ -25,4 +20,4 @@ const NavBar = (props) => {
   )
 }
 
-export NavBar;
+export default NavBar;
