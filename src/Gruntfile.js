@@ -1,31 +1,33 @@
-module.exports = function(grunt){
+module.exports = function(grunt) {
+
+  grunt.registerTask('speak', function(){
+    console.log("hello test");
+  })
 
   grunt.initConfig({
     concat: {
       js: {
-        components: ['src/App.js', 'src/NavBar.js', 'src/components/cakes/Cake.js', 'src/components/cakes/CakeEditForm.js', 'src/components/cakes/CakeForm.js', 'src/components/cakes/CakeList.js', 'src/components/cakes/DetailedCake.js'],
-        conatiners: ['src/containers/cakes/CakeContainer.js', 'src/containers/cakes/CakeEditFormContainer.js', 'src/containers/cakes/CakeFormContainer.js', 'src/containers/main/MainContainer.js'],
-        dest: 'dist/built.js',
+        src: ['src/App.js', 'src/NavBar.js', 'src/components/cakes/Cake.js', 'src/components/cakes/CakeEditForm.js', 'src/components/cakes/CakeForm.js', 'src/components/cakes/CakeList.js', 'src/components/cakes/DetailedCake.js', 'src/containers/cakes/CakeContainer.js', 'src/containers/cakes/CakeEditFormContainer.js', 'src/containers/cakes/CakeFormContainer.js', 'src/containers/main/MainContainer.js'],
+        dest: 'build/js/script.js',
       },
-      css: {
+      css : {
         src: ['src/css/App.css', 'src/css/Cake.css', 'src/css/CakeList.css', 'src/css/MainContainer.css', 'src/css/NavBar.css'],
-        dest: 'dist/built.js',
+        dest: 'build/css/cssScript.js',
       },
     },
 
     watch: {
       js: {
-        files: ['**/*.js'],
+        files: ['build/**/*.js'],
         tasks: ['concat']
       },
       css: {
-        files: ['**/*.css'],
+        files: ['build/**/*.css'],
         tasks: ['concat']
       },
     },
-
   });
-
+  grunt.file.setBase('..');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
 

@@ -18,6 +18,8 @@ const Cake = (props) => {
     <a className="name" href={url}>{props.cake.name}</a>
     </div>
     </div>
+
+    
     </React.Fragment>
   )
 }
