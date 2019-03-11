@@ -13,7 +13,7 @@ const CakeForm = (props) => {
     }
     console.log('cake', cake);
     props.handleCakePost(cake);
-    // window.location = '/'
+    window.location = '/cakes'
   }
 
   return(

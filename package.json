@@ -29,5 +29,9 @@
   "devDependencies": {
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-watch": "^1.1.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "Gruntfile.js",
+  "author": "",
+  "license": "ISC"
 }

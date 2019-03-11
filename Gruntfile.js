@@ -1,9 +1,5 @@
 module.exports = function(grunt) {
 
-  grunt.registerTask('speak', function(){
-    console.log("hello test");
-  })
-
   grunt.initConfig({
     concat: {
       js: {
@@ -19,17 +15,17 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: ['build/**/*.js'],
-        tasks: ['concat']
+        tasks: ['concat:js']
       },
       css: {
         files: ['build/**/*.css'],
-        tasks: ['concat']
+        tasks: ['concat:css']
       },
     },
   });
-  grunt.file.setBase('..');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('default', ['concat', 'watch']);
 
 
 }
