@@ -1,12 +1,10 @@
 import React from 'react'
-
 import '../../css/Cake.css'
 
 const Cake = (props) => {
   if (!props.cake){
     return null
   }
-
   const url = "/cakes/" + props.cake.id;
   return(
     <React.Fragment>
@@ -21,5 +19,4 @@ const Cake = (props) => {
     </React.Fragment>
   )
 }
-
 export default Cake;
