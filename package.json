@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.4",
-    "grunt": "^1.0.3",
+    "grunt": "^1.6.1",
     "mongodb": "^3.1.13",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
